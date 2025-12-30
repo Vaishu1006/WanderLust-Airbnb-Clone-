@@ -121,6 +121,10 @@ app.use((err, req, res, next)=>{
     // res.status(statusCode).send(message);
 });
 
+app.get("/", (req, res) => {
+  res.redirect("/listing");
+});
+
 app.listen(8080, ()=>{
     console.log("sever is listening to 8080");
 });
